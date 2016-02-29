@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="prre.ttrr.com.azmetov_ramil"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--
+        используется только для тестов
+    -->
+    <uses-sdk
+        android:maxSdkVersion="21"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21"/>
+
+    <application
+        android:name="prre.ttrr.com.azmetov_ramil.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name="prre.ttrr.com.azmetov_ramil.activity.NewsActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="prre.ttrr.com.azmetov_ramil.network.RequestsService"
+            android:exported="false"/>
+    </application>
+
+</manifest>
